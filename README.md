@@ -1,6 +1,6 @@
 console
 =======
-A basic terminal-like App Engine test program.
+A basic terminal-like App Engine test.
 
   - [ ] Javascript client and Python server which can communicate asynchronously 
       - client sends command, server responds with output)
