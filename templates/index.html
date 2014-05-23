@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html lang="en">
+  <head>
+    <link type="text/css" rel="stylesheet" href="stylesheets/main.css" />
+  </head>
+  <script type="text/javascript" src="/_ah/channel/jsapi"></script>
+  <script type="text/javascript" src="/js/jquery-2.1.1.js"
+  {% block javascript %}
+	<script type="text/javascript">
+		{% include "script.js" %}
+	</script>
+  {% endblock %}
+  <body onload="init()">
+    <form action="/" method="post">
+      <div><textarea name="terminal" rows="3" cols="60"></textarea></div>
+	  <div><textarea name="message" rows="1" cols="60"></textarea></div>
+      <div><input type="submit" value=""></div>
+    </form>
+
+    <a href="{{ url|safe }}">{{ url_linktext }}</a>
+  </body>
+</html>
+{% endautoescape %}
